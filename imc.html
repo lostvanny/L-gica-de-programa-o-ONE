@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<html></html>
+
+<script>
+
+	function pulaLinha() {
+		document.write ("<br>");
+		document.write ("<br>");
+	}
+
+	function mostra (frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura , peso) {
+		var imc = peso / (altura * altura);
+		return imc;
+
+	}
+
+	var nome = prompt ("Informe seu nome")
+	var alturaInformada = prompt ("Informe sua altura");
+	var pesoInformado = prompt ("Informe seu peso")
+
+	var imc = calculaImc (alturaInformada, pesoInformado)
+
+	mostra(nome+", o seu imc é de " + imc + " kg/m2")
+
+	if (imc < 18.5) {
+		mostra("O seu nivel de IMC é de Magreza.")
+	}
+
+	if (imc >= 18.5 && imc <= 24.9) {
+		mostra("O seu nivel de IMC está Normal.")
+	}
+
+	if (imc >=25 && imc <= 29.9) {
+		mostra("O seu nivel de IMC é de Sobrepeso")
+	}
+
+	if (imc >30) {
+		mostra("Cuidado o seu nivel de IMC é de obesidade.")
+	}
+</script>
